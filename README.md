@@ -48,3 +48,4 @@ public async Task LoadPage(int page)
                          OnePageChange="LoadPage"></PaginationComponent>
 </div>
 ```
+**Note:** You can use the **CustomClass** parameter of the component to change the style of the page buttons.
