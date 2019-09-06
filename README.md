@@ -26,7 +26,7 @@ public class PaginationModel
 }
 ```
 
-## Define the CallBack for the OnePageChange event
+## Define the CallBack for the OnPageChange event
 
 The BlazorPaginationComponent defines an **EvenCallback<int>** called **OnPageChange**. This will fire each time the user selects a new page. In your component you should define the logic which has to be executed when the user selects a new page. 
 
