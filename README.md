@@ -7,3 +7,14 @@ The NuGet package can be installed from [NuGet]: https://www.nuget.org/packages/
 ## Import the component
 
 Add **@using BlazorPaginationComponent** to the **_Imports** file in the root folder.
+
+## Use the component
+
+```html
+<div class>
+    <PaginationComponent TotalItems="@PageModel.PaginationModel.TotalItems"
+                         CurrentPage="@PageModel.PaginationModel.CurrentPage"
+                         PageSize="@PageModel.PaginationModel.PageSize"
+                         OnePageChange="LoadPage"></PaginationComponent>
+</div>
+```
