@@ -8,7 +8,7 @@ The NuGet package can be installed from [NuGet]: https://www.nuget.org/packages/
 
 Add **@using BlazorPaginationComponent** to the **_Imports** file in the root folder.
 
-## Define a page model or use parameters
+## Define your custom page model
 
 ```C#
 public class PageModel<T>
@@ -23,6 +23,18 @@ public class PaginationModel
     public int TotalItems { get; set; }
     public int CurrentPage { get; set; }
     public int PageSize { get; set; }
+}
+```
+
+## Define the CallBack for the OnePageChange event
+
+The BlazorPaginationComponent defines an **EvenCallback<int>** called **OnPageChange**. This will fire each time the user selects a new page. In your component you should define the logic which has to be executed when the user selects a new page. 
+
+For example:
+```C#
+public async Task LoadPage(int page)
+{
+    this.PageModel = await await this._httpClient.GetJsonAsync<PageModel<T>>('url');
 }
 ```
 
