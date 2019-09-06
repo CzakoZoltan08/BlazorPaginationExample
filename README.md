@@ -8,6 +8,24 @@ The NuGet package can be installed from [NuGet]: https://www.nuget.org/packages/
 
 Add **@using BlazorPaginationComponent** to the **_Imports** file in the root folder.
 
+## Define a page model or use parameters
+
+```C#
+public class PageModel<T>
+{
+    public IList<T> Entities { get; set; }
+
+    public PaginationModel PaginationModel { get; set; }
+}
+
+public class PaginationModel
+{
+    public int TotalItems { get; set; }
+    public int CurrentPage { get; set; }
+    public int PageSize { get; set; }
+}
+```
+
 ## Use the component
 
 ```html
