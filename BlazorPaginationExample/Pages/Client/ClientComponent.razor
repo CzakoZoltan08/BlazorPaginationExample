@@ -1,0 +1,68 @@
+﻿@inherits ClientComponentCode
+
+<div class="padding5">
+    <MatCard class="demo-mat-card">
+        <MatCardContent>
+            <MatBody1>
+                <div class="mat-layout-grid">
+                    <div class="mat-layout-grid-inner">
+                        <div class="mat-layout-grid-cell mat-layout-grid-cell-span-1">
+                            <img class="avatar-image" src=@GetAvatarImage() />
+                        </div>
+                        <div class="mat-layout-grid-cell mat-layout-grid-cell-span-11">
+                            <div class="mat-layout-grid-inner">
+                                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-8">
+                                    <h3>@ClientParameter.FirstName @ClientParameter.LastName</h3>
+                                </div>
+                                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-4">
+                                    <div class="mat-layout-grid-cell">
+                                        <div class="mat-layout-grid-inner">
+                                            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2">
+                                                <MatIconButton Icon="@MatIconNames.Video_call" Class="padding0"></MatIconButton>
+                                            </div>
+                                            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2">
+                                                <MatIconButton Icon="@MatIconNames.Details" Class="padding0"></MatIconButton>
+                                            </div>
+                                            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2">
+                                                <MatIconButton Icon="@MatIconNames.Edit" Class="padding0"></MatIconButton>
+                                            </div>
+                                            <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2">
+                                                <MatIconButton Icon="@MatIconNames.Delete" Class="padding0"></MatIconButton>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-12">
+                                    <div class="mat-layout-grid-inner">
+                                        <ClientPropertyComponent T="string" ClientProperty="@ClientParameter.Email" IconName="@MatIconNames.Email" />
+                                        <ClientPropertyComponent T="string" ClientProperty="@ClientParameter.Mobile" IconName="@MatIconNames.Phone" />
+                                        <ClientPropertyComponent T="string" ClientProperty="@ClientParameter.Address" IconName="@MatIconNames.Location_on" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mat-layout-grid-cell mat-layout-grid-cell-span-12">
+                            <MatDivider></MatDivider>
+                        </div>
+                        <div class="mat-layout-grid-cell mat-layout-grid-cell-span-12">
+                            <div class="mat-layout-grid-inner">
+                                <ClientPropertyComponent T="string"
+                                                         ClientProperty="@MoneyFormatWithCurrency("$", ClientParameter.Earnings)"
+                                                         IconName="@MatIconNames.Account_balance_wallet"
+                                                         LabelText="Earnings:" />
+                                <ClientPropertyComponent T="string"
+                                                         ClientProperty="@MoneyFormatWithCurrency("$", ClientParameter.Expenses)"
+                                                         IconName="@MatIconNames.Money_off"
+                                                         LabelText="Expenses:" />
+                                <ClientPropertyComponent T="string"
+                                                         ClientProperty="@GetNetMoney("$")"
+                                                         IconName="@MatIconNames.Money_off"
+                                                         LabelText="Net:" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </MatBody1>
+        </MatCardContent>
+    </MatCard>
+</div>

@@ -1,0 +1,16 @@
+﻿@typeparam T 
+
+@inherits ClientPropertyCode<T>
+
+    <div class="mat-layout-grid-cell mat-layout-grid-cell-span-3">
+        <div class="mat-layout-grid-cell">
+            <div class="mat-layout-grid-inner">
+                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-1">
+                    <MatIcon Icon="@IconName"></MatIcon>
+                </div>
+                <div class="mat-layout-grid-cell-span-11">
+                    @if (LabelText != null) {<strong>@LabelText </strong>} @ClientProperty
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,39 @@
+﻿{
+  "PaginationModel": {
+    "TotalItems": 23,
+    "CurrentPage": 6,
+    "PageSize": 4
+  },
+  "Entities": [
+    {
+      "firstname": "First6",
+      "lastname": "User",
+      "email": "first@gmail.com",
+      "mobile": "+40740000000",
+      "picture": "https://via.placeholder.com/150/0000FF/808080%20?Text=Digital.com%20C/O%20https://placeholder.com/",
+      "earnings": 123.32,
+      "expenses": 23.1,
+      "address": "Country, City, Street, Number"
+    },
+    {
+      "firstname": "Second6",
+      "lastname": "User",
+      "email": "second@gmail.com",
+      "mobile": "+40740000001",
+      "picture": "https://via.placeholder.com/150/FF0000/FFFFFF%20?Text=Digital.com%20C/O%20https://placeholder.com/",
+      "earnings": 123.32,
+      "expenses": 23.1,
+      "address": "Country, City, Street, Number"
+    },
+    {
+      "firstname": "Third6",
+      "lastname": "User",
+      "email": "third@gmail.com",
+      "mobile": "+40740000002",
+      "picture": "https://via.placeholder.com/150/FFF00/FFFFFF%20?Text=Digital.com%20C/O%20https://placeholder.com/",
+      "earnings": 123.32,
+      "expenses": 23.1,
+      "address": "Country, City, Street, Number"
+    }
+  ]
+}

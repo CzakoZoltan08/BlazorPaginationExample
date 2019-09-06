@@ -1,0 +1,28 @@
+﻿@page "/clients"
+
+@inherits ClientListCode
+
+@if (PageModel == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var client in PageModel.Entities)
+    {
+        <ClientComponent ClientParameter="@client"></ClientComponent>
+    }
+
+    <div class="mat-layout-grid">
+        <div class="mat-layout-grid-inner">
+            <div class="mat-layout-grid-cell"></div>
+            <div class="mat-layout-grid-cell red-pagination-button">
+                <PaginationComponent TotalItems="@PageModel.PaginationModel.TotalItems"
+                                     CurrentPage="@PageModel.PaginationModel.CurrentPage"
+                                     PageSize="@PageModel.PaginationModel.PageSize"
+                                     OnePageChange="LoadPage"></PaginationComponent>
+            </div>
+            <div class="mat-layout-grid-cell"></div>
+        </div>
+    </div>
+}
